@@ -1,0 +1,40 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "utf-8"}/
+    %title Practica_5
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{content: "", name: "description"}/
+    %meta{content: "bootstrappage.com", name: "author"}/
+    / Bootstrap style
+    %link{href: "public/assets/css/bootstrap.min.css", rel: "stylesheet"}/
+    %link{href: "public/assets/css/comingsoon.css", rel: "stylesheet"}/
+    / Bootstrap style responsive
+    %link{href: "public/assets/css/bootstrap-responsive.min.css", rel: "stylesheet"}/
+  %body
+    %br/
+    .comingsoonBlk
+      %h1 Rock, Paper and Scissors
+      %h3
+        Choose one of the following:
+        %br/
+      .socialMedia
+        %a{"data-original-title" => "Rock", "data-placement" => "top", :href => '?choice=rock'}
+          %img{alt: "Rock", src: "public/img/piedra.jpg", style: "width:100px", title: "Rock"}/
+        %a{"data-original-title" => "Paper", "data-placement" => "top", :href => '?choice=paper'}
+          %img{alt: "Paper", src: "public/img/papel.jpg", style: "width:100px", title: "Paper"}/
+        %a{"data-original-title" => "Scissors", "data-placement" => "top", :href => '?choice=scissors'}
+          %img{alt: "Scissors", src: "public/img/tijeras.jpg", style: "width:100px", title: "Scissors"}/
+      %h3
+        = answer
+      %h3
+        Victorias
+        = plays['wins']
+      %h3
+        Derrotas
+        = plays['defeats']
+      %h3 
+        Empates
+        = plays['ties']
+
+    .copyright Eduardo Delgado Álvarez © 2013.
